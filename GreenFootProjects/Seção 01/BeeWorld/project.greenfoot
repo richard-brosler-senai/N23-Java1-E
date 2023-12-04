@@ -3,7 +3,6 @@ class.Abelha.image=bee.png
 class.Aranha.image=spider.png
 class.Mosca.image=fly.png
 class.MyWorld.image=sand.jpg
-<<<<<<< HEAD
 dependency1.from=MyWorld
 dependency1.to=Abelha
 dependency1.type=UsesDependency
@@ -13,12 +12,10 @@ dependency2.type=UsesDependency
 dependency3.from=MyWorld
 dependency3.to=Mosca
 dependency3.type=UsesDependency
-=======
->>>>>>> 665d1a0ebc700e4cb4234db1202474fd1eada1e0
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=830
+editor.fx.0.width=1550
+editor.fx.0.x=-7
+editor.fx.0.y=-7
 height=830
 package.numDependencies=3
 package.numTargets=4
