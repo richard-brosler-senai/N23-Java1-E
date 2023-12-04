@@ -1,20 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Abelha here.
+ * Esta classe representa a classe Abelha para o jogo BeeWorld.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Richard Brosler 
+ * @version 01-12-2023
  */
 public class Abelha extends Actor
 {
     /**
-     * Act - do whatever the Abelha wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - Método que é executado quando apertamos os botões
+     * Act ou o botão Run na tela inicial do Greenfoot.
      */
     public void act()
     {
         // Add your action code here.
         move(1);
+        if (Greenfoot.isKeyDown("left")){
+            turn(-5);
+        }
+        if (Greenfoot.isKeyDown("right")){
+            turn(5);
+        }
     }
+    
 }
