@@ -6,8 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Mosca extends Actor
+public class Mosca extends Inseto
 {
+    //Fields
+    //Constructors
+    public Mosca(){
+        turn(Greenfoot.getRandomNumber(90)-45);
+    }
+    //Metodos
     /**
      * Act - do whatever the Mosca wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,5 +21,7 @@ public class Mosca extends Actor
     public void act()
     {
         // Add your action code here.
+        move(1);
+        verificaCanto();
     }
 }
