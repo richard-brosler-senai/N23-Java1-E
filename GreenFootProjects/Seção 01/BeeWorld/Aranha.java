@@ -20,5 +20,17 @@ public class Aranha extends Inseto
            turn(Greenfoot.getRandomNumber(90)-45); 
         }
         verificaCanto();
+        //Se estiver além da metade do comprimento e
+        // metade da altura anda mais rápido
+        if (! (getX()>getWorld().getWidth()/2 && 
+            getY()>getWorld().getHeight()/2) ){
+            move(2);
+        }
+        /*
+         *  getX()<=getWorld().getWidth()/2 && 
+         *  getY()<=getWorld().getHeight()/2
+         */
+        Abelha ab = ((BeeWorld)getWorld()).getAbelha();
+        turnTowards(ab.getX(), ab.getY());
     }
 }

@@ -8,6 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Abelha extends Actor
 {
+    int score;
+    int vidas;
+    static int VALOR_MOSCA = 100;
+    /**
+     * Constructor da Abelha
+     */
+    public Abelha(){
+        score = 0;
+        vidas = 3;
+    }
     /**
      * Act - Método que é executado quando apertamos os botões
      * Act ou o botão Run na tela inicial do Greenfoot.
@@ -24,6 +34,8 @@ public class Abelha extends Actor
         }
         reposicionar();
         capturaMosca();
+        capturadaPelaAranha();
+        mostrarScore();
     } 
 
     /**
@@ -79,6 +91,46 @@ public class Abelha extends Actor
     public void capturaMosca(){
         if (isTouching(Mosca.class)){
             removeTouching(Mosca.class);
+            Greenfoot.playSound("slurp.wav");
+            getWorld().addObject(
+              new Mosca(), 
+              Greenfoot.getRandomNumber(getWorld().getWidth())+1, 
+              Greenfoot.getRandomNumber(getWorld().getHeight())+1
+              );
+            score += VALOR_MOSCA; //score = score + VALOR_MOSCA
         }
+    }
+    /**
+     * Procedimento alternativo de captura da mosca
+     */
+    public void capturaMosca2(){
+        Actor mosca = getOneIntersectingObject(Mosca.class);
+        if (mosca != null){
+            getWorld().removeObject(mosca);
+        }
+    }
+    /**
+     * Método que verifica se foi capturado pela Aranha
+     */
+    public void capturadaPelaAranha(){
+        if (isTouching(Aranha.class)){
+            setLocation(
+              Greenfoot.getRandomNumber(getWorld().getWidth())+1, 
+              Greenfoot.getRandomNumber(getWorld().getHeight())+1
+              );
+            Greenfoot.playSound("capturado.wav");
+            vidas--;
+            if (vidas<=0) {
+                getWorld().showText("GAME OVER", 400, 300);
+                Greenfoot.stop();
+            }
+        }
+    }
+    /**
+     * Método que mostra o score e vidas na tela
+     */
+    public void mostrarScore(){
+        getWorld().showText("Score: " + score, 150, 20);
+        getWorld().showText("Vidas: " + vidas, 650, 20);
     }
 }

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BeeWorld extends World
 {
-
+    Abelha abelha;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -26,7 +26,7 @@ public class BeeWorld extends World
      */
     private void prepare()
     {
-        Abelha abelha = new Abelha();
+        abelha = new Abelha();
         addObject(abelha,72,79);
         Aranha aranha = new Aranha();
         addObject(aranha,28,337);
@@ -40,5 +40,8 @@ public class BeeWorld extends World
         addObject(new Mosca(), Greenfoot.getRandomNumber(800)+1,
             Greenfoot.getRandomNumber(600)+1);
 
+    }
+    public Abelha getAbelha(){
+        return abelha;
     }
 }
