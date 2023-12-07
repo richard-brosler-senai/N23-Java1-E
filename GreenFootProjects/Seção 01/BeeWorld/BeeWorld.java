@@ -31,14 +31,16 @@ public class BeeWorld extends World
         Aranha aranha = new Aranha();
         addObject(aranha,28,337);
         
-        addObject(new Mosca(),60,180);
-
-        addObject(new Mosca(), Greenfoot.getRandomNumber(800)+1,
-            Greenfoot.getRandomNumber(600)+1);
-        addObject(new Mosca(), Greenfoot.getRandomNumber(800)+1,
-            Greenfoot.getRandomNumber(600)+1);
-        addObject(new Mosca(), Greenfoot.getRandomNumber(800)+1,
-            Greenfoot.getRandomNumber(600)+1);
+        int qtde=0;
+        while (qtde<10){
+            qtde++; //qtde = qtde + 1;
+            int vel = Greenfoot.getRandomNumber(8)+1; //velocidade
+            int ang = Greenfoot.getRandomNumber(360); //angulo
+            int pX = Greenfoot.getRandomNumber(getWidth())+1;//posx
+            int pY = Greenfoot.getRandomNumber(getHeight())+1;//posy
+            //Criando as moscas
+            addObject(new Mosca(vel,ang), pX, pY);
+        }
 
     }
     public Abelha getAbelha(){

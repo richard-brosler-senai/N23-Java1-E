@@ -11,12 +11,27 @@ public class Abelha extends Actor
     int score;
     int vidas;
     static int VALOR_MOSCA = 100;
+    private GreenfootImage[] imgs;
+    private int ultImg;
     /**
      * Constructor da Abelha
      */
     public Abelha(){
         score = 0;
         vidas = 3;
+        imgs = new GreenfootImage[4];//criando um conjunto de 4
+        //Usando as imagens
+        /*
+        imgs[0] = new GreenfootImage("bee01.png");
+        imgs[1] = new GreenfootImage("bee02.png");
+        imgs[2] = new GreenfootImage("bee03.png");
+        imgs[3] = new GreenfootImage("bee04.png"); 
+        */
+        //Alterando o código para deixar dinâmico o carregamento
+        for (int i=0;i<4;i++){
+            imgs[i] = new GreenfootImage("bee0"+(i+1)+".png");
+        }
+        ultImg = 0;
     }
     /**
      * Act - Método que é executado quando apertamos os botões
@@ -36,6 +51,7 @@ public class Abelha extends Actor
         capturaMosca();
         capturadaPelaAranha();
         mostrarScore();
+        trocaImagem();
     } 
 
     /**
@@ -132,5 +148,13 @@ public class Abelha extends Actor
     public void mostrarScore(){
         getWorld().showText("Score: " + score, 150, 20);
         getWorld().showText("Vidas: " + vidas, 650, 20);
+    }
+    /**
+     * Procedimento para troca de imagens da abelha
+     */
+    public void trocaImagem(){
+        setImage(imgs[ultImg]);
+        //Módulo ou resto da divisão %
+        ultImg = ++ultImg % 4;
     }
 }

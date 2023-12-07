@@ -9,7 +9,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Mosca extends Inseto
 {
     //Fields
+    private int velocidade = 1;
+    private int angulo = 0;
     //Constructors
+    public Mosca(int pVelocidade, int pAngulo){
+        velocidade = pVelocidade;
+        angulo = pAngulo;
+        setRotation(angulo);
+    }
+    
     public Mosca(){
         turn(Greenfoot.getRandomNumber(90)-45);
     }
@@ -21,7 +29,7 @@ public class Mosca extends Inseto
     public void act()
     {
         // Add your action code here.
-        move(1);
+        move(velocidade);
         verificaCanto();
     }
 }
