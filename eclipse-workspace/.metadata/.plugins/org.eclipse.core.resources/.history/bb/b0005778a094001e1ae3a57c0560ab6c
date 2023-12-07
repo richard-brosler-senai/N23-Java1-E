@@ -7,7 +7,7 @@ public class GaloesPorLitros {
 		double litrosPorGalao = 3.785;
 		double galoes = 15;
 		double totalLitros = galoes * litrosPorGalao;
-		System.out.println("Quantidade total de litros é " + 
+		System.out.println("Quantidade total de litros e " + 
 								totalLitros);
 	}
 
