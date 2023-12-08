@@ -5,11 +5,10 @@ public class GaloesPorLitros {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		double litrosPorGalao = 3.785;
-		double qtdeGaloes = 15;
-		double litros = litrosPorGalao * qtdeGaloes;
-		System.out.println("Quantidade de litros é " + 
-				litros);
-
+		double galoes = 15;
+		double totalLitros = galoes * litrosPorGalao;
+		System.out.println("Quantidade total de litros é " + 
+								totalLitros);
 	}
 
 }
