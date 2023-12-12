@@ -1,0 +1,12 @@
+package br.com.senaisp.bauru.richard.secao02;
+
+public class TestarCalculo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CalculosMatematicos calc = new CalculosMatematicos();
+		int retorno = calc.inverterValor(123);
+		System.out.println(retorno);
+	}
+
+}

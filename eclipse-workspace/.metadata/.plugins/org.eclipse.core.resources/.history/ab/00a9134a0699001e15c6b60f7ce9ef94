@@ -1,0 +1,26 @@
+package br.com.senaisp.bauru.richard.secao02;
+
+public class Produto {
+	public int codigo;
+	public String descricao;
+	public double preco;
+	public double custo;
+	public boolean ativo;
+	/*
+	 * Getters e Setters
+	 * Escopo de variáveis
+	 * Casting
+	 * conversão implícita
+	 * conversão explícita
+	 * classe Math
+	 * Strings
+	 * Caracter de escape 4.4 pag 20
+	 * exercício separar texto
+	 * switch usando calculadora para exemplificar
+	 * cuidados com o switch e com o break
+	 * uso do -> no switch
+	 * Operador ternário
+	 * while, do while e for
+	 * break e continue
+	 */
+}

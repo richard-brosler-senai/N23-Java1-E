@@ -1,0 +1,20 @@
+package br.com.senaisp.bauru.richard.secao02;
+
+public class CalculosMatematicos {
+	/**
+	 * Função que inverte um valor inteiro.
+	 * @param valor Deverá ser informado um valor inteiro.
+	 * @return Retorna o valor passado invertido.
+	 */
+	public int inverterValor(int valor) {
+		//123 passado resulta em 321
+		//Só poderá usar Soma, Multiplicação,
+		//Divisão e Resto
+		int ret = 0;
+		int c = valor / 100;
+		int d = valor % 100 / 10;
+		int u = valor % 10;
+		ret = u * 100 + d * 10 + c;
+		return ret;
+	}
+}
