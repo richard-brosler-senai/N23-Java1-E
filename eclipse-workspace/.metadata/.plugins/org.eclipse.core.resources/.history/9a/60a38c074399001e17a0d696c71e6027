@@ -1,0 +1,12 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class TesteCasting {
+
+	public static void main(String[] args) {
+		int vlr = 15;
+		short vlrSh = (short)vlr;
+		System.out.println(vlrSh);
+		
+	}
+
+}

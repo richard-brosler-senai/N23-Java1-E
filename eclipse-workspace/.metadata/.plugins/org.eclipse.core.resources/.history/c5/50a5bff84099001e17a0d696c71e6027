@@ -1,0 +1,18 @@
+package br.com.senaisp.bauru.richard.secao02;
+
+public class TestarProduto {
+
+	public static void main(String[] args) {
+		Produto prd = new Produto();
+		prd.setCodigo(14);
+		System.out.println(prd.getCodigo());
+		//Escopo de variável
+		if (prd.getCodigo()>0) {
+			String nomePessoa = "Roberto";
+			System.out.println(nomePessoa);
+		}
+		System.out.println(nomePessoa);
+		
+	}
+
+}

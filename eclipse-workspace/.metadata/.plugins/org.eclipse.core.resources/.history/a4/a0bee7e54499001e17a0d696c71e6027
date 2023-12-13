@@ -1,0 +1,14 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class TestarStrings {
+
+	public static void main(String[] args) {
+		String nome1 = "Richard";
+		String nome2 = "Richard";
+		
+		if (nome1==nome2) {
+			System.out.println("São iguais!");
+		}
+	}
+
+}

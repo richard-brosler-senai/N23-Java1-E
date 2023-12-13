@@ -1,0 +1,18 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class TesteCasting {
+
+	public static void main(String[] args) {
+		int vlr = 33_000;
+		short vlrSh = (short)vlr;
+		//Conversão explícita de valores
+		double vlrDbl = vlr;
+		//Conversão implícita
+		System.out.println(vlrSh);
+		System.out.println(vlrDbl);
+		//Math.sqrt => raiz quadrada
+		
+		
+	}
+
+}

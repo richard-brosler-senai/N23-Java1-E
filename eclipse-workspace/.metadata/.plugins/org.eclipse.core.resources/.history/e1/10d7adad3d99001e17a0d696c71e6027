@@ -1,0 +1,9 @@
+package br.com.senaisp.bauru.richard.secao02;
+
+public class Produto {
+	private int codigo;
+	private String descricao;
+	private double preco;
+	private double custo;
+	private boolean ativo;
+}

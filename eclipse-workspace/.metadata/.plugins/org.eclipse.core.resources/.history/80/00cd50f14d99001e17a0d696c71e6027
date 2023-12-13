@@ -1,0 +1,14 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class ExercicioString {
+
+	public static void main(String[] args) {
+		String email = "roberto@website.com.br";
+		System.out.println("O caracter "
+				+ "@ está na posição " +
+				email.indexOf('@'));
+		System.out.print("Mostrando somente o nome: ");
+		
+	}
+
+}

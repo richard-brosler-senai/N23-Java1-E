@@ -1,0 +1,20 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class TestarStrings {
+
+	public static void main(String[] args) {
+		String nome1 = "Richard";
+		String nome2 = "Richard";
+		
+		if (nome1==nome2) {
+			System.out.println("São iguais!");
+		}
+		System.out.println(nome1);
+		System.out.println(nome2);
+		//Escape de caracteres
+		System.out.println("Olá\n \"pessoal\"");
+		System.out.println("\\\\");
+		System.out.print("Este texto \nficará quebrado");
+	}
+
+}

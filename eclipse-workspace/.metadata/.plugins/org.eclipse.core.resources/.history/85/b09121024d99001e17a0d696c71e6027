@@ -1,0 +1,9 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class ExercicioString {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
