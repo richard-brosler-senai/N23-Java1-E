@@ -24,7 +24,6 @@ public class ExercicioString02 {
 		} else {
 			System.out.println("não é um palindromo");
 		}
-		sc.close();
 	}
 
 }
