@@ -1,0 +1,23 @@
+package br.com.senaisp.bauru.richard.secao06;
+
+import java.util.Scanner;
+
+public class TesteFinally {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite um valor: ");
+		double vlr1 = sc.nextDouble();
+		
+		System.out.println("Digite outro valor:");
+		double vlr2 = sc.nextDouble();
+		
+		double total = vlr1 / vlr2;
+		
+		System.out.println("Total = " + total);
+		
+		
+	}
+
+}
