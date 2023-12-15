@@ -1,0 +1,28 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+import java.util.Scanner;
+
+public class TesteSwitch3 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite um valor de 1 a 10:");
+		int vlr = sc.nextInt();
+		switch(vlr) {
+		case 1 : System.out.println("Ganhou uma caneta!");
+		case 2 : System.out.println("Ganhou uma régua!");
+		case 3 : System.out.println("Ganhou uma borracha!");
+		case 4 : System.out.println("Ganhou um lápis!");
+		case 5 : System.out.println("Ganhou uma calculadora!");
+		case 6 :
+		case 7 :
+		case 8 : System.out.println("Ganhou um celular!");
+		case 9 : System.out.println("Ganhou um Livro!");
+		case 10: System.out.println("Ganhou um chocotone!");
+		default: 
+			System.out.println("Você perdeu todos os "
+								+ "prêmios!");
+		}
+	}
+
+}

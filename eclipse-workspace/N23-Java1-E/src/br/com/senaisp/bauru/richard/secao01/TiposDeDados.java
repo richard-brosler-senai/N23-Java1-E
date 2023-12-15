@@ -2,6 +2,7 @@ package br.com.senaisp.bauru.richard.secao01;
 
 public class TiposDeDados {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		boolean tBooleano = true; //true e false 1bit

@@ -1,0 +1,19 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class Baralho {
+	private Carta[] cartas;
+	//Constructor
+	public Baralho() {
+		int qteCarta = Carta.NAIPES.length * 
+                       Carta.NUMEROS.length;
+		cartas = new Carta[qteCarta];
+		for(int i=0;i<qteCarta;i++) {
+			//0..3 (Espada..Paus)
+			int npI = i / Carta.NUMEROS.length;
+			//0..12 (A,2,3...K)
+			int nmI = i % Carta.NUMEROS.length;
+			cartas[i] = new Carta(Carta.NAIPES[npI],
+								  Carta.NUMEROS[nmI]);
+		}
+	}
+}

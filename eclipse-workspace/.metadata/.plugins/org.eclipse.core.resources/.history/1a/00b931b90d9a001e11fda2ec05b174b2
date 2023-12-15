@@ -1,0 +1,75 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class Carta {
+	public static String[] NAIPES = 
+		{"Espada","Ouro","Copas", "Paus"};
+	public static String[] NUMEROS = 
+		{"A","2","3","4","5","6","7","8","9",
+		 "10", "Q", "J", "K"};
+	public static String[] IMAGENS = 
+		{"♠","♦","♥","♣"};
+	//Fields (Campos)
+	private String naipe;
+	private String numero;
+	//constructor
+	public Carta(String np, String nm) {
+		setNaipe(np);
+		setNumero(nm);
+	}
+	//Métodos
+	public String getNaipe() {
+		return naipe;
+	}
+	public void setNaipe(String naipe) {
+		if (getIndiceNaipe(naipe)>-1) {
+			this.naipe = naipe;
+		} else {
+			System.out.println("Naipe Inválido!");
+		}
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		if (getIndiceNumero(numero)>-1) {
+			this.numero = numero;
+		} else {
+			System.out.println("Número inválido!");
+		}
+	}
+	private int getIndiceNaipe(String value) {
+		int ret = -1;
+		for (int i=0;i<NAIPES.length;i++) {
+			if (NAIPES[i].equalsIgnoreCase(value)) {
+				ret = i;
+			}
+		}
+		return ret;
+	}
+	private int getIndiceNumero(String value) {
+		int ret = -1;
+		for (int i=0;i<NUMEROS.length;i++) {
+			if (NUMEROS[i].equalsIgnoreCase(value)) {
+				ret = i;
+			}
+		}
+		return ret;		
+	}
+	@Override
+	public String toString() {
+					//1234567
+		String txt = "+-----+\n"+
+					 "|##   |\n"+
+					 "|  !  |\n"+
+					 "|   ##|\n"+
+					 "+-----+\n";
+		int npI = getIndiceNaipe(naipe);
+		int nmI = getIndiceNumero(numero);
+		//String spc = nmI == 9 ? "" : " ";
+		String spc = " ";
+		txt = txt.replaceFirst("##", NUMEROS[nmI] + spc );
+		txt = txt.replaceFirst("!", IMAGENS[npI]);
+		txt = txt.replaceFirst("##", spc + NUMEROS[nmI]);
+		return txt;
+	}
+}

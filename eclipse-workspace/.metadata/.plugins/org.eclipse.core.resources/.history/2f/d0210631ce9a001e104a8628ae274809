@@ -1,0 +1,29 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+import java.util.Scanner;
+
+public class TestarSwitch {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Bem vindo a calculadora Java");
+		double vlr1 = 0, vlr2 = 0, total = 0;
+		String operador = "";
+
+		System.out.println("Digite o valor 1:");
+		vlr1 = sc.nextDouble();
+		
+		System.out.println("Digite o valor 2:");
+		vlr2 = sc.nextDouble();
+		sc.nextLine(); //para capturar o enter 
+		System.out.println("Escolha uma das opções:");
+		System.out.println("+ Soma");
+		System.out.println("- Subtração");
+		System.out.println("* Multiplicação");
+		System.out.println("/ Divisão");
+		System.out.println("Digite o simbolo da opção:");
+		operador = sc.nextLine();
+		
+	}
+
+}

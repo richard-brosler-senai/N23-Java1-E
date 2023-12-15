@@ -1,0 +1,10 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class TestarCarta {
+
+	public static void main(String[] args) {
+		Carta ct = new Carta("Copas","As");
+		System.out.println(ct.toString());
+	}
+
+}

@@ -1,0 +1,24 @@
+package br.com.senaisp.bauru.richard.secao05;
+
+public class Carta {
+	//Fields (Campos)
+	private String naipe;
+	private String numero;
+	//constructor
+	public Carta(String np, String nm) {
+		
+	}
+	//Métodos
+	public String getNaipe() {
+		return naipe;
+	}
+	public void setNaipe(String naipe) {
+		this.naipe = naipe;
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+}
